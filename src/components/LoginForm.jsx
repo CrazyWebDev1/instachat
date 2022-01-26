@@ -14,9 +14,9 @@ const LoginForm = () => {
         e.preventDefault();
 
         const authObject = { 'Project-ID' : "a08a8608-28d2-4b64-bda4-d194fcb86133", 'User-Name' : username, 'User-Secret' : password };
-
+  console.log("abhi yhi hai")
         try {
-
+           console.log('yha tak pahuch gya')
             await axios.get('https://api.chatengine.io/chats', { headers : authObject });
 
             localStorage.setItem('username', username);
@@ -26,6 +26,7 @@ const LoginForm = () => {
             setError('');
         }
         catch(error) {
+            console.log('error aa gai')
             setError('Oops, incorrect credentials.');
         }
         };

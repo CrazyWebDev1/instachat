@@ -9,14 +9,13 @@ const App = () => {
   if (!localStorage.getItem('username')) return <LoginForm />;
   return (
     <ChatEngine
+    height='100vh'
+    projectID='a08a8608-28d2-4b64-bda4-d194fcb86133'
+    userName="DKM community"
+    userSecret="afiie58f2jd"
+    renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
+      />
 
-height="100vh"
-userName="DKM Community"
-userSecret="Dk123123"
-projectID="a08a8608-28d2-4b64-bda4-d194fcb86133"
-renderChatFeed={(chatAppProps) => <ChatFeed { ...chatAppProps} />}
-onNewMessage={() => new Audio('https://chat-engine-assets.s3.amazonaws.com/click.mp3').play()}
-/>
 );
 };
 
